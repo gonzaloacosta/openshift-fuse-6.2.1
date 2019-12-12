@@ -1,10 +1,9 @@
 FROM jboss/base-jdk:8
 
-ARG FUSE_ZIP
-ARG FUSE_FOLDER
-ARG FUSE_REPO_HTTP
+E_ZIP jboss-fuse-full-6.2.1.redhat-084.zip
+ENV FUSE_FOLDER jboss-fuse-full-6.2.1.redhat-084
+ENV FUSE_REPO_HTTP http://10.36.255.6:8080
 
-RUN cd /opt/jboss/ && \
     curl -O $FUSE_REPO_HTTP/$FUSE_ZIP && \
     unzip $FUSE_ZIP -d /opt/jboss/ && \
     ln -s /opt/jboss/$FUSE_FOLDER fuse && \
