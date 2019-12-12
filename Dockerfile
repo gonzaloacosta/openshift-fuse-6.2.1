@@ -1,6 +1,6 @@
 FROM jboss/base-jdk:8
 
-E_ZIP jboss-fuse-full-6.2.1.redhat-084.zip
+ENV FUSE_ZIP jboss-fuse-full-6.2.1.redhat-084.zip
 ENV FUSE_FOLDER jboss-fuse-full-6.2.1.redhat-084
 ENV FUSE_REPO_HTTP http://10.36.255.6:8080
 
